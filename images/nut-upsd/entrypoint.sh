@@ -70,5 +70,5 @@ echo 0 > /var/run/nut/upsd.pid && chown $USER.$GROUP /var/run/nut/upsd.pid
 echo 0 > /var/run/upsmon.pid
 
 /usr/sbin/upsdrvctl -u root start
-/usr/sbin/upsd -u $USER
+/usr/sbin/upsd -u $USER -F &
 exec /usr/sbin/upsmon -D
